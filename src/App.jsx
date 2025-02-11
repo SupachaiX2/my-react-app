@@ -125,11 +125,6 @@ function PostsA(){
 
 
 function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <DataFetcher />
-    </QueryClientProvider>
-  );
 
   //Server Home_PostList
 
