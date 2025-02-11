@@ -87,8 +87,57 @@ function StoreA(){
 }
 
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import DataFetcher from './components/DataFetcher';
+import './index.css';
+
+const queryClient = new QueryClient();
+
+function QueryClientA(){
+  return (
+    <QueryClientProvider client={queryClient}>
+      <div className="container mx-auto p-6">
+        <h1 className="text-3xl font-bold text-center mb-6">React API Example</h1>
+        <DataFetcher />
+      </div>
+    </QueryClientProvider>
+  );
+}
+
+
+
+import Posts from './components/Posts';
+
+function PostsA(){
+  return (
+    <QueryClientProvider client={queryClient}>
+      <div className="container mx-auto p-6">
+        <Header title="React Workshop" />
+        <p className="mb-4">เรียนรู้พื้นฐานของ React ผ่านการปฏิบัติจริง</p>
+        <Posts />
+      </div>
+    </QueryClientProvider>
+  );
+}
+
+
+import PostList from './app/components/PostList';
+
+function Home_PostList() {
+  return (
+    <main className="p-6">
+      <h1 className="text-2xl font-bold">🚀 React Server Components</h1>
+      <PostList />
+    </main>
+  );
+}
 
 function App() {
+
+  //Server Home_PostList
+  return (
+    <Home_PostList/>
+  );
 
   return (
     <Router>
@@ -96,13 +145,17 @@ function App() {
         <Link to="/">Home</Link> | 
         <Link to="/about">About</Link> | 
         <Link to="/Greeting">Greeting</Link> | 
-        <Link to="/store">Store</Link>
+        <Link to="/store">Store</Link> | 
+        <Link to="/Posts">Posts</Link> | 
+        <Link to="/queryClient">queryClient</Link>
       </nav>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/greeting" element={<Greeting />} />
       <Route path="/store" element={<StoreA />} />
+      <Route path="/Posts" element={<PostsA />} />
+      <Route path="/queryClient" element={<QueryClientA />} />
     </Routes>
   </Router>
   );
