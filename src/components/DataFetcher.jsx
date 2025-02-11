@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
 // ดึงค่า API Key จากไฟล์ .env
-const ACCESS_KEY = "V1vN1FNnf2FrkRcoYmPeI5vCLjrMMgVbRgFXD1iWuOM";
+const ACCESS_KEY = "IWxdUq-Hx5E8_Y6jdJ_L9xQ6oxVv5__6Wc1IEiRmlG4";
 
 // ฟังก์ชันสำหรับดึงข้อมูลรูปภาพจาก Unsplash API
 const fetchImages = async (query) => {
