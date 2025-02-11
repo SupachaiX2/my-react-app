@@ -121,23 +121,16 @@ function PostsA(){
 }
 
 
-import PostList from './app/components/PostList';
 
-function Home_PostList() {
-  return (
-    <main className="p-6">
-      <h1 className="text-2xl font-bold">🚀 React Server Components</h1>
-      <PostList />
-    </main>
-  );
-}
 
 function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <DataFetcher />
+    </QueryClientProvider>
+  );
 
   //Server Home_PostList
-  return (
-    <Home_PostList/>
-  );
 
   return (
     <Router>
