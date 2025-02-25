@@ -13,14 +13,37 @@
  
 .post-card {
   padding: 15px;
-  border: 1px solid #5f195f;
+  border: 1px solid #a81949;
   border-radius: 8px;
-  background-color: rgb(98, 204, 121);
+  background-color: rgb(167, 58, 152);
 }
- 
+
 .post-card h3 {
   margin-top: 0;
   color: #333;
+}
+
+
+
+.image-src-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.image-src {
+  padding: 15px;
+  border: 1px solid #a81949;
+  border-radius: 8px;
+  background-color: rgb(167, 58, 152);
+}
+
+.text-image-src {
+  
+  font-weight: 500;
+  color: #ff648b;
+  text-decoration: inherit;
 }
  
 

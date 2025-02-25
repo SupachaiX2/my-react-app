@@ -58,9 +58,9 @@ const DataFetcher = () => {
       <div className="grid grid-cols-3 gap-4">
         {data &&
           data.map((image) => (
-            <div key={image.id} className="overflow-hidden rounded-lg shadow-md">
-              <img src={image.urls.small} alt={image.alt_description} className="w-full h-40 object-cover" />
-              <p className="text-sm p-2">{image.alt_description || 'ไม่มีคำอธิบาย'}</p>
+            <div key={image.id} className="image-src-grid">
+              <img src={image.urls.small} alt={image.alt_description} className="image-src" />
+              <p className="text-image-src">{image.alt_description || 'ไม่มีคำอธิบาย'}</p>
             </div>
           ))}
       </div>
