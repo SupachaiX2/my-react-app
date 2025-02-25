@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+.posts-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ 
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+ 
+.post-card {
+  padding: 15px;
+  border: 1px solid #5f195f;
+  border-radius: 8px;
+  background-color: rgb(98, 204, 121);
+}
+ 
+.post-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+ 
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
