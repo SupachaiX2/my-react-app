@@ -127,24 +127,24 @@ function App() {
   //Server Home_PostList
 
   return (
-    <Router>
+    <Router basename="/my-react-app">
       <nav>
-        <Link to="/">Home</Link> | 
+        <Link to="//">Home</Link> | 
         <Link to="/about">About</Link> | 
-        <Link to="/Greeting">Greeting</Link> | 
+        <Link to="/greeting">Greeting</Link> |  
         <Link to="/store">Store</Link> | 
-        <Link to="/Posts">Posts</Link> | 
+        <Link to="/posts">Posts</Link>  | 
         <Link to="/queryClient">queryClient</Link>
       </nav>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/greeting" element={<Greeting />} />
-      <Route path="/store" element={<StoreA />} />
-      <Route path="/Posts" element={<PostsA />} />
-      <Route path="/queryClient" element={<QueryClientA />} />
-    </Routes>
-  </Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/greeting" element={<Greeting />} />
+        <Route path="/store" element={<StoreA />} />
+        <Route path="/posts" element={<PostsA />} />
+        <Route path="/queryClient" element={<QueryClientA />} />
+      </Routes>
+    </Router>
   );
 
 }
