@@ -2,7 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+//import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 import './App.css'
 
 
@@ -111,7 +113,7 @@ import Posts from './components/Posts';
 function PostsA(){
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="container mx-auto p-6">
+      <div className="container mx-auto p-6 md:">
         <Header title="React Workshop" />
         <p className="mb-4">เรียนรู้พื้นฐานของ React ผ่านการปฏิบัติจริง</p>
         <Posts />
@@ -127,9 +129,9 @@ function App() {
   //Server Home_PostList
 
   return (
-    <Router basename="/my-react-app">
+    <Router>
       <nav>
-        <Link to="//">Home</Link> | 
+        <Link to="/">Home</Link> | 
         <Link to="/about">About</Link> | 
         <Link to="/greeting">Greeting</Link> |  
         <Link to="/store">Store</Link> | 
